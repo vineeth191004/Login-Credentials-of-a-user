@@ -21,38 +21,6 @@ windows.resizable(0,0)
 windows.geometry('510x380+200+180')
 
 
-def continue_with_google():
-    # Authenticate with Google
-    try:
-        # Ask user to choose the registered email ID
-        email_id = simpledialog.askstring("Choose Email ID", "Enter your registered Email ID:")
-        if email_id is None:
-            return
-
-        token = simpledialog.askstring("Google Authentication", "Enter your Google Authentication Token:")
-        if token is None:
-            return
-
-        # Verify the Google authentication token
-        CLIENT_ID = "404943209271-7bm5davsq6ia5he7mmkua9utllf81t7u.apps.googleusercontent.com"  # Replace with your actual Google client ID
-        idinfo = id_token.verify_oauth2_token(token, requests.Request(), CLIENT_ID)
-
-        # Check if the email ID matches the registered email
-        if idinfo['email'] == email_id:
-            messagebox.showinfo('Success', 'Successful Google Authentication')
-            messagebox.showinfo('', 'You are Welcome')
-            # Clear entry fields
-            emailEntry.delete(0, END)
-            passwordEntry.delete(0, END)
-            windows.destroy()
-            import Management_system
-        else:
-            messagebox.showerror('Alert!', 'Invalid Email ID')
-    except ValueError:
-        messagebox.showerror('Alert!', 'Invalid Google Authentication Token')
-
-
-
 #database
 
 def send_email(receiver_email, new_password):
@@ -148,32 +116,15 @@ def login():
             encoded_username = base64.b64encode(username).decode('utf-8')
             encoded_password = base64.b64encode(password).decode('utf-8')
 
-            # Kerberos authentication
-            try:
-                # Make a request to the server using HTTP Negotiate (Kerberos) authentication
-                response = requests.get('http://your-server-url.com', auth=HttpNegotiateAuth())
-
-                if response.status_code == 200:
-                    messagebox.showinfo('Success', 'Successful Login')
-                    messagebox.showinfo('', 'You are Welcome')
-
-                    # Clear entry fields
-                    emailEntry.delete(0, END)
-                    passwordEntry.delete(0, END)
-
-                    windows.destroy()
-                    import Management_system
-                else:
-                    messagebox.showerror('Alert!', 'Kerberos Authentication Failed')
-
-            except Exception as e:
-                print(f'An error occurred during Kerberos authentication: {str(e)}')
-                messagebox.showerror('Alert!', 'Kerberos Authentication Failed')
+            messagebox.showinfo('Success', 'Successful Login')
+            # Navigate to the next page here
+            windows.destroy()  # Destroy the current window
+            import Management_system
 
 
 
 
-#check button configuration
+        #check button configuration
 def show():
     passwordEntry.configure(show='*')
     check.configure(command=hide, text='')
@@ -249,10 +200,6 @@ fogotus.place(x=360, y=180)
 # Login button
 loginbtn = Button(frame, text='Login', bg='Violet', pady=10, width=23, fg='White', font=('open sans',9,'bold'), cursor='hand2', border=0, borderwidth=5, command=login)
 loginbtn.grid(row=9, columnspan=5, pady=30)
-
-# Continue with Google button
-googlebtn = Button(frame, text='Continue with Google', bg='White', pady=10, width=23, fg='Black', font=('open sans', 9, 'bold'), cursor='hand2', border=0, borderwidth=5, command=continue_with_google)
-googlebtn.grid(row=10, columnspan=5, pady=10)
 
 #checkbutton/box
 check = Checkbutton(frame, text='', bg='black', command=show)
