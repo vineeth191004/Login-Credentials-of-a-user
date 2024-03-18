@@ -3,8 +3,6 @@ from PIL import Image, ImageTk
 from tkinter import messagebox, simpledialog
 import pymysql
 import hashlib
-from google.oauth2 import id_token
-from google.auth.transport import requests
 import smtplib
 from email.mime.text import MIMEText
 import base64
