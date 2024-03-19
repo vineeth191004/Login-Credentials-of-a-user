@@ -51,6 +51,13 @@ The project begins with users filling out their details in the personal registra
 
 It provides a basic registration form with input validation and database integration. It can be further enhanced with additional features such as email verification, stronger password hashing algorithms, and improved error handling.
 
+![Screenshot 2024-03-19 005934](https://github.com/vineeth191004/Login-Credentials-of-a-user/assets/142156630/6cd811d8-7352-47af-968a-77118f857fdf)
+
+![image](https://github.com/vineeth191004/Login-Credentials-of-a-user/assets/142156630/ce9f06d5-02f4-4f51-9a73-26de3117dafe)
+
+![image](https://github.com/vineeth191004/Login-Credentials-of-a-user/assets/142156630/dc976ca2-8d79-42f5-b53f-a1889b8a79dd)
+
+
 # Overview of Login screen 
 
 This Python script [Login_Screen](https://github.com/vineeth191004/Login-Credentials-of-a-user/blob/main/Login_screen.py) represents a simple login screen GUI application created using the Tkinter library. Here's an overview of its functionality:
@@ -83,6 +90,8 @@ This Python script [Login_Screen](https://github.com/vineeth191004/Login-Credent
 
 This Login_screen is linked to a personal registration form, likely for a larger system where users can register accounts and then log in using the provided credentials. It incorporates security measures such as password hashing and Base64 encoding to protect user information. Additionally, it offers functionality for password recovery and new account creation. Overall, it provides a basic yet functional login interface for users.
 
+![image](https://github.com/vineeth191004/Login-Credentials-of-a-user/assets/142156630/de4b8f4c-25bd-444e-9845-4efa8b348e1c)
+
 # Overview of Forgot Username and password
 
 **Forgot Username Functionality**:
@@ -96,6 +105,15 @@ This Login_screen is linked to a personal registration form, likely for a larger
 - Users who forget their password can initiate a password reset process.
 - This process usually involves verifying the user's identity through school name, university name or security questions.
 - After successful verification, users can set a new password securely.
+
+- ![image](https://github.com/vineeth191004/Login-Credentials-of-a-user/assets/142156630/8bb38cf9-96e6-4137-b00d-e642e0fadace)
+
+- ![image](https://github.com/vineeth191004/Login-Credentials-of-a-user/assets/142156630/00a2113a-a1ce-4837-b581-1976810bb6cb)
+
+
+
+
+
 
 
 
