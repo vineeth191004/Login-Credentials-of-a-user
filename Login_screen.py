@@ -6,8 +6,6 @@ import hashlib
 import smtplib
 from email.mime.text import MIMEText
 import base64
-import requests
-from requests_negotiate_sspi import HttpNegotiateAuth
 
 
 
