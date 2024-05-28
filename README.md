@@ -10,10 +10,11 @@ The project begins with users filling out their details in the personal registra
 
 # Skills
 
-**Tkinter**
-**Python**
-**SQL**
+**Tkinter**  
+**Python**  
+**SQL**  
 **Password Hashing**
+
 
 # Key features of the Credential Management System include:
 
