@@ -8,6 +8,13 @@ The CMS encompasses various functionalities, including user registration, userna
 
 The project begins with users filling out their details in the personal registration form. After submission, users can register for an account. Upon successful registration, users proceed to the login screen, where they can input their credentials to access the platform's features. Forgot password and username functionalities are available for users who need to retrieve or reset their login credentials, enhancing security and user access control.
 
+# Skills
+
+**Tkinter**
+**Python**
+**SQL**
+**Password Hashing**
+
 # Key features of the Credential Management System include:
 
 **User registration:** Allows new users to create accounts securely.  
